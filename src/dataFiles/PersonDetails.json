@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": "9a76",
+      "title": "Game of Thrones",
+      "description": "Best Series ever",
+      "group": "Web Series",
+      "date": "2019-08-24"
+    },
+    {
+      "id": "731f",
+      "title": "Friends",
+      "description": "Best Comedy Show",
+      "group": "Web Series",
+      "date": "2023-06-24"
+    },
+    {
+      "id": "496e",
+      "title": "The Vampire Diaries",
+      "description": "Best Horror Show Ever",
+      "group": "Web Series",
+      "date": "2023-05-28"
+    },
+    {
+      "id": "af94",
+      "title": "Harry Potter",
+      "description": "Best Childhood movie ever",
+      "group": "Movies",
+      "date": "2008-12-23"
+    }
+  ]
+}
