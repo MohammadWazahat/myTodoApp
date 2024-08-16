@@ -3,7 +3,7 @@ import GetTodo from './GetTodo'
 
 const Home = () => {
   return (
-    <div>
+    <div className='bgOne'>
       i m home
       <GetTodo/>
     </div>

@@ -1,16 +1,20 @@
-*{
+/* *{
     background-color: #070630;
     color :rgb(250, 235, 215)
+} */
+.bgOne{
+background-color: #fff9da;
 }
-
-
+.bgTwo{
+    background-color: #fed2ff;
+}
 
 Link{
     border: 1px solid rgb(249, 205, 205);
 }
 
 .bdr{
-    border : 1px solid white;
+    border : 1px solid black;
 
 }
 
@@ -20,6 +24,9 @@ Link{
 
 .btnTwo{
     background-color:  rgb(0, 255, 234);
+}
+.btnThree{
+    background-color: #d5cbb8;
 }
 
 .fc{
