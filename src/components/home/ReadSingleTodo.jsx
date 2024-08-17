@@ -36,7 +36,8 @@ const ReadSingleTodo = () => {
     console.log(id);
   };
   return (
-    <div className="">
+    <div className="fc">
+      <div className="w-full md:w-3/4 lg:w-1/2">
       <section className="mt-12 ">
         <div className="flex justify-end m-4 ">
           <Link
@@ -78,6 +79,7 @@ const ReadSingleTodo = () => {
           </div>
         </div>
       </section>
+    </div>
     </div>
   );
 };

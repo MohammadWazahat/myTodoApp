@@ -27,15 +27,14 @@ const GetTodo = () => {
     };
     fetchData();
   }, []);
+  const [arr, setArr] = useState([]);
 
-  // console.log(myUser);
 
   const initialState = {
     myData: myUser,
     isLoading: false,
     isError: false,
     myButtons: [],
-    // productsByBrand: [],
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -105,22 +104,36 @@ const GetTodo = () => {
   };
   AllGroups;
 
+
+
   // //for filtering data
   const newData = state.myButtons.map((item) => {
-    console.log(item.group);
+    // setArr(item.group)
     return item.group;
   });
+  // setArr(newData)
   console.log(newData);
+  // const X = newData.toString();
+  // console.log(X)
+  // const myArray = X.split(" ");
+  // console.log(myArray)
 
+  // const x = [initialState.myButtons.group];
+  // console.log(x);
   // // to merge all array in one
   // const x = newData.flat();
   // //   console.log(x)
   // const Y = [...new Set(x)];
   // console.log(Y);
-  // const [arr, setArr] = useState(Y);
-  // console.log(arr);
+
+  if (state.isLoading == true) {
+    return <div>Loading..............</div>;
+  }
+  if (state.isError == true) {
+    return <div>Error..............</div>;
+  }
   return (
-    <div>
+    <div >
       <section className="">
         <div className="flex justify-between mx-4 pt-12">
           <div className="text-3xl flex justify-center items-center">
@@ -137,12 +150,12 @@ const GetTodo = () => {
         </div>
       </section>
       <section className="mt-12">
-        <div className="fc flex-col gap-4 mx-2 w-full">
-          <div className="flex gap-4 w-full ">
+        <div className="fc flex-col gap-4 mx-2">
+          <div className=" flex gap-4 w-full ">
             <button className="btnThree p-2 w-full" onClick={() => SortAsc()}>
               Sort By Title A to Z
             </button>
-            <button className="btnThree p-2 w-full " onClick={() => SortDesc()}>
+            <button className="btnThree p-2 w-full" onClick={() => SortDesc()}>
               Sort By Title Z to A
             </button>
           </div>

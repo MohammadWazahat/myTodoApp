@@ -33,7 +33,8 @@ const UpdateTodo = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="fc">
+      <div className="w-full md:w-3/4 lg:w-1/2">
        <section className="mt-8">
         <div>
           <div className="h-20 text-3xl flex justify-center items-center">
@@ -106,6 +107,7 @@ const UpdateTodo = () => {
         </div>
       </section> 
       
+    </div>
     </div>
   );
 };
