@@ -34,7 +34,7 @@ const UpdateTodo = () => {
 
   return (
     <div>
-       <section className="mt-24">
+       <section className="mt-8">
         <div>
           <div className="h-20 text-3xl flex justify-center items-center">
           Edit Your Todo
@@ -50,8 +50,8 @@ const UpdateTodo = () => {
         </div>
       </section>
    
-     <section className="mt-12">
-        <div className="border border-gray-200 hover:border-green-400 m-4 p-2 ">
+     <section className="mt-8">
+        <div className="border-2 bg-gray-200 border-gray-200 hover:border-green-400 m-4 p-2 ">
           <form onSubmit={submitForm}>
             <div className="flex p-2">
               <input

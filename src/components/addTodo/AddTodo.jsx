@@ -27,8 +27,8 @@ const AddTodo = () => {
   };
 
   return (
-    <div>
-      <section className="mt-24">
+    <div className="">
+      <section className="mt-8">
         <div>
           <div className="h-20 text-3xl flex justify-center items-center">
             Add New Todo Details
@@ -44,8 +44,8 @@ const AddTodo = () => {
         </div>
       </section>
 
-      <section className="mt-12">
-        <div className="border border-gray-200 hover:border-green-400 m-4 p-2 ">
+      <section className="mt-8">
+        <div className="border-2 border-gray-200 hover:border-green-400 m-4 p-2 bg-gray-200">
           <form onSubmit={submitForm}>
             <div className="flex p-2">
               <input

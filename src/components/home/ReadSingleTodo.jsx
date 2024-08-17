@@ -36,8 +36,8 @@ const ReadSingleTodo = () => {
     console.log(id);
   };
   return (
-    <div>
-      <section className="mt-24 ">
+    <div className="">
+      <section className="mt-12 ">
         <div className="flex justify-end m-4 ">
           <Link
             className="border-2 border-slate-200 hover:border-orange-400 p-3 btnOne rounded-3xl text-gray-900 font-medium "
@@ -47,8 +47,8 @@ const ReadSingleTodo = () => {
           </Link>
         </div>
       </section>
-      <section className="mt-12">
-        <div className="bdr mx-2 p-2 flex flex-col gap-4">
+      <section className="mt-12 ">
+        <div className="bdr mx-2 p-2 flex flex-col gap-4 bgOne">
           <div className=" flex justify-end items-center text-orange-400 font-semibold ">{data.group}</div>
           <div className="text-3xl">{data.title}</div>
           <div className="text-xl">{data.description}</div>

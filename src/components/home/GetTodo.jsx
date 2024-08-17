@@ -36,11 +36,10 @@ const GetTodo = () => {
     isError: false,
     myButtons: [],
     // productsByBrand: [],
-  }
+  };
 
   const [state, dispatch] = useReducer(reducer, initialState);
   // console.log(state.myData)
-
 
   const SortAsc = () => {
     // console.log("i m clicked");
@@ -74,7 +73,6 @@ const GetTodo = () => {
     });
   };
 
-
   const FilterByGroup = (x) => {
     console.log(x);
     dispatch({
@@ -105,27 +103,26 @@ const GetTodo = () => {
       },
     });
   };
-  AllGroups
+  AllGroups;
 
-    // //for filtering data
-    const newData = state.myButtons.map((item) => {
-      console.log(item.group)
-      return item.group;
-    });
-    console.log(newData);
+  // //for filtering data
+  const newData = state.myButtons.map((item) => {
+    console.log(item.group);
+    return item.group;
+  });
+  console.log(newData);
 
-
-    // // to merge all array in one
-    // const x = newData.flat();
-    // //   console.log(x)
-    // const Y = [...new Set(x)];
-    // console.log(Y);
-    // const [arr, setArr] = useState(Y);
-    // console.log(arr);
+  // // to merge all array in one
+  // const x = newData.flat();
+  // //   console.log(x)
+  // const Y = [...new Set(x)];
+  // console.log(Y);
+  // const [arr, setArr] = useState(Y);
+  // console.log(arr);
   return (
     <div>
-      <section className="mt-24">
-        <div className="flex justify-between mx-4">
+      <section className="">
+        <div className="flex justify-between mx-4 pt-12">
           <div className="text-3xl flex justify-center items-center">
             Todo List
           </div>
@@ -139,61 +136,76 @@ const GetTodo = () => {
           </div>
         </div>
       </section>
-      <div>{newData}</div>
-      <section>
-      <button className="bdr" onClick={()=>AllGroups()}>
-             All goupss
-              </button>
-      </section>
-      <section>
-        {
-          state.myButtons.map((item,index)=>{
-            // console.log(item)
-            return <div key={index}>
-              {/* <button className="bdr" onClick={()=>filterByGroup(item)}> */}
-              <button className="bdr" onClick={()=>FilterByGroup(item)}>
-              
-              {item.group }
-              </button>
-            </div>
-          })
-        }
-      </section>
-      <section>
-      <button className="bdr" onClick={()=>AllProducts()}>
-             All products
-              </button>
-      </section>
-      <section>
-        <div className="flex gap-4">
-          <button className="btnThree p-2 m-2" onClick={() => SortAsc()}>
-            Sort By Title A to Z
-          </button>
-          <button className="btnThree p-2 m-2" onClick={() => SortDesc()}>
-            Sort By Title Z to A
-          </button>
-          <button className="btnThree p-2 m-2" onClick={() => SortLowest()}>
-            Oldest
-          </button>
-          <button className="btnThree p-2 m-2" onClick={() => SortHighest()}>
-            Newest
-          </button>
-        </div>
-      </section>
-
       <section className="mt-12">
-        <div className="">
-          <div className=" grid grid-cols-1 mx-4 gap-4 ">
-            {state.myData.map((user, index) => {
-              return (
-                <div className="" key={index}>
-                  <SingleTodoCard {...user} />
-                </div>
-              );
-            })}
+        <div className="fc flex-col gap-4 mx-2 w-full">
+          <div className="flex gap-4 w-full ">
+            <button className="btnThree p-2 w-full" onClick={() => SortAsc()}>
+              Sort By Title A to Z
+            </button>
+            <button className="btnThree p-2 w-full " onClick={() => SortDesc()}>
+              Sort By Title Z to A
+            </button>
+          </div>
+          <div className="flex gap-4 w-full">
+            <button
+              className="btnThree p-2 w-full"
+              onClick={() => SortLowest()}
+            >
+              Oldest
+            </button>
+            <button
+              className="btnThree p-2  w-full"
+              onClick={() => SortHighest()}
+            >
+              Newest
+            </button>
           </div>
         </div>
       </section>
+      <div className="flex mt-12">
+        <div className="flex flex-col w-1/4 mx-2">
+          <section className="">
+            <button
+              className="bdr w-full p-2 btnFour"
+              onClick={() => AllProducts()}
+            >
+              All products
+            </button>
+          </section>
+          <section className="flex flex-col gap-2 mt-12">
+            {state.myButtons.map((item, index) => {
+              // console.log(item)
+              return (
+                <div key={index}>
+                  {/* <button className="bdr" onClick={()=>filterByGroup(item)}> */}
+                  <button
+                    className="bdr w-full"
+                    onClick={() => FilterByGroup(item)}
+                  >
+                    {item.group}
+                  </button>
+                </div>
+              );
+            })}
+          </section>
+        </div>
+
+        <div className="w-3/4">
+          <section className="">
+            <div className="">
+              <div className=" grid grid-cols-1 mx-4 gap-4 ">
+                {state.myData.map((user, index) => {
+                  return (
+                    <div className="" key={index}>
+                      <SingleTodoCard {...user} />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
   );
 };

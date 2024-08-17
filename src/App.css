@@ -8,7 +8,9 @@ background-color: #fff9da;
 .bgTwo{
     background-color: #fed2ff;
 }
-
+.bgThree{
+    background-color: rgb(255, 226, 98);
+}
 Link{
     border: 1px solid rgb(249, 205, 205);
 }
@@ -27,6 +29,9 @@ Link{
 }
 .btnThree{
     background-color: #d5cbb8;
+}
+.btnFour{
+    background-color: #fdd851;
 }
 
 .fc{
