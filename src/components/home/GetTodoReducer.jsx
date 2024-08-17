@@ -1,6 +1,6 @@
 const reducer = (state, action) => {
-//   console.log(state);
-//   console.log(action.payload);
+  //   console.log(state);
+  //   console.log(action.payload);
   if (action.type === "SET_LOADING") {
     // console.log(action.payload)
     return {
@@ -25,8 +25,8 @@ const reducer = (state, action) => {
     return {
       ...state,
       myData: action.payload,
-      myButtons :  action.payload,
-    //    myButtons :  Y,
+      myButtons: action.payload,
+      //    myButtons :  Y,
       // productsByBrand: action.payload,
       isLoading: false,
       isError: false,
@@ -89,7 +89,7 @@ const reducer = (state, action) => {
       return item.group;
     });
     console.log(newData);
-    return { ...state, myButtons : newData };
+    return { ...state, myButtons: newData };
   }
 
   return state;

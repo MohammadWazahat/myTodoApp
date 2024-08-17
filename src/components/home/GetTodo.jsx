@@ -29,7 +29,6 @@ const GetTodo = () => {
   }, []);
   const [arr, setArr] = useState([]);
 
-
   const initialState = {
     myData: myUser,
     isLoading: false,
@@ -104,8 +103,6 @@ const GetTodo = () => {
   };
   AllGroups;
 
-
-
   // //for filtering data
   const newData = state.myButtons.map((item) => {
     // setArr(item.group)
@@ -133,7 +130,7 @@ const GetTodo = () => {
     return <div>Error..............</div>;
   }
   return (
-    <div >
+    <div>
       <section className="">
         <div className="flex justify-between mx-4 pt-12">
           <div className="text-3xl flex justify-center items-center">
