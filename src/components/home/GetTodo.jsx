@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useReducer } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./GetJsonData.css";
 import SingleTodoCard from "./SingleTodoCard";
 import reducer from "./GetTodoReducer";
 
